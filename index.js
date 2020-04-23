@@ -115,7 +115,7 @@ function prompter(cz, commit) {
 function formatCommit(commit, answers) {
   commit(
     filter([
-      answers.type + ': ',
+      answers.type + ':',
       answers.issues ? '[' + answers.issues + ']' : undefined,
       answers.message,
       answers.workflow ? '#' + answers.workflow : undefined,

@@ -27,7 +27,7 @@ describe('format commits', () => {
     czJiraSmartCommit.formatCommit(
       (result) => {
         expect(result).to.equal(
-          'feat:  [CZ-234 CZ-235] sample commit message #done #time 3y 2w 7d 8h 30m #comment This took waaaaay too long'
+          'feat: [CZ-234 CZ-235] sample commit message #done #time 3y 2w 7d 8h 30m #comment This took waaaaay too long'
         );
       },
       { type, issues, message, workflow, time, comment }
@@ -37,7 +37,7 @@ describe('format commits', () => {
     czJiraSmartCommit.formatCommit(
       (result) => {
         expect(result).to.equal(
-          'feat:  [CZ-234 CZ-235] sample commit message #time 3y 2w 7d 8h 30m #comment This took waaaaay too long'
+          'feat: [CZ-234 CZ-235] sample commit message #time 3y 2w 7d 8h 30m #comment This took waaaaay too long'
         );
       },
       { type, issues, message, time, comment }
@@ -47,7 +47,7 @@ describe('format commits', () => {
     czJiraSmartCommit.formatCommit(
       (result) => {
         expect(result).to.equal(
-          'feat:  [CZ-234 CZ-235] sample commit message #done #comment This took waaaaay too long'
+          'feat: [CZ-234 CZ-235] sample commit message #done #comment This took waaaaay too long'
         );
       },
       { type, issues, message, workflow, comment }
@@ -57,7 +57,7 @@ describe('format commits', () => {
     czJiraSmartCommit.formatCommit(
       (result) => {
         expect(result).to.equal(
-          'feat:  [CZ-234 CZ-235] sample commit message #done #time 3y 2w 7d 8h 30m'
+          'feat: [CZ-234 CZ-235] sample commit message #done #time 3y 2w 7d 8h 30m'
         );
       },
       { type, issues, message, workflow, time }
