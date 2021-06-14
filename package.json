@@ -1,6 +1,6 @@
 {
   "name": "@vmo11/cz-jira-smart-commit",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A commitizen adapter for Jira smart commits",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,7 @@
     "test": "mocha index.test --compilers js:babel/register",
     "release": "npm run test && with-package git commit -am pkg.version && with-package git tag pkg.version && git push && npm publish --access public && git push --tags",
     "release:beta": "npm run release && npm run tag:beta",
-    "tag:beta": "with-package npm dist-tag add pkg.name@pkg.version beta",
-    "commit": "git cz"
+    "tag:beta": "with-package npm dist-tag add pkg.name@pkg.version beta"
   },
   "repository": {
     "type": "git",
@@ -43,7 +42,6 @@
     "with-package": "0.2.0"
   },
   "dependencies": {
-    "@vmo11/cz-jira-smart-commit": "/Users/huyhq/Projects/c11/cz-jira-smart-commit",
     "inquirer": "^1.1.3"
   }
 }
