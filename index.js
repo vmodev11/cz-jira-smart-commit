@@ -32,40 +32,39 @@ function prompter(cz, commit) {
       {
         type: 'list',
         name: 'type',
-        message:
-          "Select the type of change that you're committing (required):\n",
+        message: "Select the type of change that you're committing (required):\n",
         choices: [
           {
-            value: 'Feat',
-            name: 'Feat:     A new feature',
+            value: 'feat',
+            name: 'feat:     A new feature',
           },
           {
-            value: 'Fix',
-            name: 'Fix:      A bug fix',
+            value: 'fix',
+            name: 'fix:      A bug fix',
           },
           {
-            value: 'Docs',
-            name: 'Docs:     Documentation only changes',
+            value: 'docs',
+            name: 'docs:     Documentation only changes',
           },
           {
-            value: 'Style',
-            name: 'Style:    Changes that do not affect the meaning of the code\n            (white-space, formatting, missing semi-colons, etc)',
+            value: 'style',
+            name: 'style:    Changes that do not affect the meaning of the code\n            (white-space, formatting, missing semi-colons, etc)',
           },
           {
-            value: 'Refactor',
-            name: 'Refactor: A code change that neither fixes a bug nor adds a feature',
+            value: 'refactor',
+            name: 'refactor: A code change that neither fixes a bug nor adds a feature',
           },
           {
-            value: 'Perf',
-            name: 'Perf:     A code change that improves performance',
+            value: 'perf',
+            name: 'perf:     A code change that improves performance',
           },
           {
-            value: 'Test',
-            name: 'Test:     Adding missing tests',
+            value: 'test',
+            name: 'test:     Adding missing tests',
           },
           {
-            value: 'Chore',
-            name: 'Chore:    Changes to the build process or auxiliary tools\n            and libraries such as documentation generation',
+            value: 'chore',
+            name: 'chore:    Changes to the build process or auxiliary tools\n            and libraries such as documentation generation',
           },
         ],
       },
@@ -112,8 +111,7 @@ function prompter(cz, commit) {
       {
         type: 'input',
         name: 'info',
-        message:
-          'More info for detail (eg: link to JIRA task or any notes) (optional):\n',
+        message: 'More info for detail (eg: link to JIRA task or any notes) (optional):\n',
       },
     ])
     .then((answers) => {
@@ -131,7 +129,7 @@ function formatCommit(commit, answers) {
       answers.time ? '#time ' + answers.time : undefined,
       answers.comment ? '#comment ' + answers.comment : undefined,
       answers.info ? '\n\n' + answers.info : undefined,
-    ]).join(' ')
+    ]).join(' '),
   );
 }
 
